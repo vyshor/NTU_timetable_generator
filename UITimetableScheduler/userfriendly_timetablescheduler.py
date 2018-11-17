@@ -10,6 +10,7 @@ DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT']
 TYPE = ["LEC/STUDIO", "SEM", "TUT", "LAB"]
 DATA = {}
 
+print("Loading... ")
 with open('database.p', 'rb') as f:
     DATA = pickle.load(f)
 

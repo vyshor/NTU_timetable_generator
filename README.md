@@ -6,6 +6,8 @@ Download the easy-to-use timetable generator below:
 
 2018/2019 Sem 1: [Updated as of 31/05/2018](http://www.mediafire.com/file/yv6w9yz3y3g9tek/20182019Sem1.zip)
 
+2018/2019 Sem 2: [Updated as of 17/11/2018](http://www.mediafire.com/file/9dc76oc38aapn1y/20182019Sem2.zip)
+
 ### Information on each file
 
     UITimetableScheduler - Folder | Codes for the user-friendly version
