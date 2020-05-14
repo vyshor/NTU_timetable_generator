@@ -19,10 +19,19 @@ def extract_table(html):
     for x in range(len(df) // 2):
         df_title = df[x * 2 + 1]
         df_schedule = df[x * 2]
+        # try:
+        # df_title.rename(columns=df_title.iloc[0], inplace=True)
+        try:
+            df_title = df_title.reindex(df_title.index.drop(0))
+        except KeyError:
+            return
+        
+        if store.get(df_schedule[0][0]): # Terminate early if already stored
+            return
 
-        df_title.rename(columns=df_title.iloc[0], inplace=True)
-        df_title = df_title.reindex(df_title.index.drop(0))
         store[df_schedule[0][0]] = df_title
+        print(df_schedule[0][0])
+    # print(store)
 
     with open('allscheduledict.p', 'wb') as f:
         pickle.dump(store, f)

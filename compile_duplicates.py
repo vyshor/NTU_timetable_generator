@@ -27,10 +27,9 @@ for key in tables.keys():
             if np.array_equal(np.array(table_index[index]['DAY']),
                               np.array(table_index[indexes[x]]['DAY'])) and np.array_equal(np.array(
                     table_index[index]['TIME']), np.array(table_index[indexes[x]]['TIME'])):
-                table_index[index]['INDEX'] = np.array(table_index[index]['INDEX']) + '|' + np.array(
-                    table_index[indexes[x]]['INDEX'])
-                table_index[index]['GROUP'] = np.array(table_index[index]['GROUP']) + '|' + np.array(
-                    table_index[indexes[x]]['GROUP'])
+                table_index[index]['INDEX'] = np.array(table_index[index]['INDEX']).astype(str).astype(np.object) + '|' + np.array(table_index[indexes[x]]['INDEX']).astype(str).astype(np.object)
+                table_index[index]['GROUP'] = np.array(table_index[index]['GROUP']).astype(str).astype(np.object) + '|' + np.array(
+                    table_index[indexes[x]]['GROUP']).astype(str).astype(np.object)
                 del table_index[indexes[x]]
 
         if combined_table.empty:

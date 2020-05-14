@@ -2,3 +2,6 @@
 __pycache__
 UITimetableScheduler/build
 UITimetableScheduler/UI_executables
+PastAllScheduleDict/
+PastCompiledScheduleDict/
+PastDatabase/

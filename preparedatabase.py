@@ -19,7 +19,7 @@ for coursecode in tables.keys():
             tablemini = table[table['INDEX'] == index]
             for row in tablemini.itertuples(index=False, name=None):
                 to_append = list(filter(lambda v: v == v, row))
-                to_append[-1] = to_append[-1].replace('Teaching ', "")
+                to_append[-1] = str(to_append[-1]).replace('Teaching ', "")
                 DATAmini[index].append(to_append[1:])
 
         DATA[coursecode] = DATAmini
