@@ -223,7 +223,7 @@ def planning(coursecode):
                 mydict['Courses'][x] = coursecode[x]
             for x in range(len(ultimatelist[u])):
                 mydict['Indexes'][x] = ultimatelist[u][x]
-                if mydict['Indexes'][x].find('.') != -1:
+                if type(mydict['Indexes'][x]) == float or mydict['Indexes'][x].find('.') != -1:
                     mydict['Indexes'][x] = "00" + str(int(float(mydict['Indexes'][x])))
             mydict['Time'] = [str(x) + '-' + str(x + 100) for x in TIME]
             for x in range(6):
@@ -314,6 +314,10 @@ if __name__ == '__main__':
             input('')
             exit()
 
+    if len(coursecodes) <= 1:
+        print("Error: Need select at least two courses")
+        input('')
+        exit()
     if os.path.exists("..\\Timetable") and os.path.isdir("..\\Timetable"):
         shutil.rmtree('..\\Timetable')
         os.mkdir('..\\Timetable')

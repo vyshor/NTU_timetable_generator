@@ -10,6 +10,8 @@ Download the easy-to-use timetable generator below:
 
 2019/2020 Sem 1: [Updated as of 19/05/2019](http://www.mediafire.com/file/63o6nsie170ruft/20192020Sem1.zip)
 
+2020/2021 Sem 1: [Updated as of 14/05/2020](https://www.mediafire.com/file/kkjnme5zx1g6hh7/20202021Sem1.zip/file)
+
 ### Information on each file
 
     UITimetableScheduler - Folder | Codes for the user-friendly version
